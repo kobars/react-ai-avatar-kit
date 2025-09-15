@@ -1,5 +1,5 @@
 {
-  "name": "heygen-streaming-avatar-kit",
+  "name": "react-ai-avatar-kit",
   "private": true,
   "scripts": {
     "build": "turbo run build",
