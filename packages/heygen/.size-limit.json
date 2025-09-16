@@ -1,0 +1,8 @@
+[
+  {
+    "name": "HeyGen package",
+    "path": "dist/index.js",
+    "limit": "50 KB",
+    "ignore": ["@heygen/streaming-avatar"]
+  }
+]
