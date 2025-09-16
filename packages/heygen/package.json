@@ -42,13 +42,16 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
+    "clean": "rm -rf dist",
     "lint": "biome check src",
     "format": "biome format --write src",
+    "check": "biome check --fix src",
     "check-types": "tsc --noEmit",
     "size": "size-limit"
   },
   "dependencies": {
-    "@heygen/streaming-avatar": "^2.1.0"
+    "@heygen/streaming-avatar": "^2.1.0",
+    "@react-ai-avatar-kit/core": "workspace:*"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",

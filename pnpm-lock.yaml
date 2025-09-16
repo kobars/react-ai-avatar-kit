@@ -82,6 +82,9 @@ importers:
       '@heygen/streaming-avatar':
         specifier: ^2.1.0
         version: 2.1.0
+      '@react-ai-avatar-kit/core':
+        specifier: workspace:*
+        version: link:../core
       react:
         specifier: ^18.0.0 || ^19.0.0
         version: 19.1.0

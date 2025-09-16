@@ -1,3 +1,4 @@
+import { generateId } from "@react-ai-avatar-kit/core";
 import { useCallback } from "react";
 
 import {
@@ -136,7 +137,7 @@ export const useStreamingAvatarSession = () => {
       } else {
         currentSender = MessageSender.CLIENT;
         addMessage({
-          id: Date.now().toString(),
+          id: generateId(),
           sender: MessageSender.CLIENT,
           content: detail.message,
         });
@@ -156,7 +157,7 @@ export const useStreamingAvatarSession = () => {
       } else {
         currentSender = MessageSender.AVATAR;
         addMessage({
-          id: Date.now().toString(),
+          id: generateId(),
           sender: MessageSender.AVATAR,
           content: detail.message,
         });
