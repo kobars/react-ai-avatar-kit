@@ -13,6 +13,7 @@ export default defineConfig({
   skipNodeModulesBundle: true,
   tsconfig: "./tsconfig.build.json",
   treeshake: true,
-  splitting: false,
-  minify: false,
+  splitting: true,
+  minify: true,
+  metafile: true,
 });
