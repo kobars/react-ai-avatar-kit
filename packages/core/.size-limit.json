@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Core package",
+    "path": "dist/index.js",
+    "limit": "5 KB"
+  },
+  {
+    "name": "Types only",
+    "path": "dist/types.js",
+    "limit": "1 KB"
+  },
+  {
+    "name": "Utils only",
+    "path": "dist/utils.js",
+    "limit": "3 KB"
+  }
+]
