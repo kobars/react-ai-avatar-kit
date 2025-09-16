@@ -14,6 +14,10 @@
       "outputs": [".next/**", "!.next/cache/**", "dist/**", "*.tsbuildinfo"],
       "outputLogs": "new-only"
     },
+    "clean": {
+      "cache": false,
+      "outputs": []
+    },
     "dev": {
       "cache": false,
       "persistent": true
