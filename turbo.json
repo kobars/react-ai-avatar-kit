@@ -4,18 +4,64 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
-    },
-    "lint": {
-      "dependsOn": ["^lint"]
-    },
-    "check-types": {
-      "dependsOn": ["^check-types"]
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env*",
+        "tsconfig.json",
+        "tsconfig.build.json",
+        "tsup.config.ts"
+      ],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**", "*.tsbuildinfo"],
+      "outputLogs": "new-only"
     },
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "format": {
+      "inputs": ["$TURBO_DEFAULT$", "biome.json"],
+      "outputs": [],
+      "outputLogs": "new-only"
+    },
+    "check": {
+      "dependsOn": ["^check"],
+      "inputs": ["$TURBO_DEFAULT$", "biome.json"],
+      "outputLogs": "new-only"
+    },
+    "check-types": {
+      "dependsOn": ["^check-types"],
+      "inputs": ["$TURBO_DEFAULT$", "tsconfig.json", "tsconfig.build.json"],
+      "outputLogs": "new-only"
+    },
+    "lint": {
+      "dependsOn": ["^lint"],
+      "inputs": ["$TURBO_DEFAULT$", "biome.json"],
+      "outputLogs": "new-only"
+    },
+    "size": {
+      "dependsOn": ["build"],
+      "inputs": ["dist/**", ".size-limit.json"],
+      "outputs": [],
+      "outputLogs": "new-only"
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "jest.config.*", "vitest.config.*"],
+      "outputs": ["coverage/**"],
+      "outputLogs": "new-only"
+    },
+    "publish-packages": {
+      "dependsOn": ["build", "check", "check-types", "size"],
+      "inputs": ["dist/**", "package.json"],
+      "outputs": [],
+      "cache": false
     }
-  }
+  },
+  "globalDependencies": [
+    "package.json",
+    "pnpm-lock.yaml",
+    ".npmrc",
+    "turbo.json",
+    "biome.json"
+  ]
 }
