@@ -1,6 +1,6 @@
 {
   "name": "@react-ai-avatar-kit/heygen",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "React hooks for integrating HeyGen streaming avatars",
   "keywords": [
     "react",
@@ -10,10 +10,10 @@
     "streaming",
     "hooks"
   ],
-  "homepage": "https://github.com/kobarsumarsono/react-ai-avatar-kit#readme",
+  "homepage": "https://github.com/kobars/react-ai-avatar-kit#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kobarsumarsono/react-ai-avatar-kit.git",
+    "url": "https://github.com/kobars/react-ai-avatar-kit.git",
     "directory": "packages/heygen"
   },
   "license": "MIT",
