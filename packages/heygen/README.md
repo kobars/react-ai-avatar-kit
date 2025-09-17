@@ -222,13 +222,13 @@ await repeatMessageSync("Wait for repeat");
 ## 7. Connection Quality
 
 ```tsx
-import { useConnectionQuality } from "@react-ai-avatar-kit/heygen";
+import { ConnectionQuality, useConnectionQuality } from "@react-ai-avatar-kit/heygen";
 
 function ConnectionStatus() {
   const { connectionQuality } = useConnectionQuality();
 
   return (
-    <div style={{ color: connectionQuality === "good" ? "green" : "red" }}>
+    <div style={{ color: connectionQuality === ConnectionQuality.GOOD ? "green" : "red" }}>
       Connection: {connectionQuality}
     </div>
   );
