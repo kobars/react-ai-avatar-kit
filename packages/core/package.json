@@ -1,6 +1,6 @@
 {
   "name": "@react-ai-avatar-kit/core",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Core types and utilities for React AI Avatar Kit",
   "keywords": [
     "react",
@@ -16,7 +16,7 @@
     "directory": "packages/core"
   },
   "license": "MIT",
-  "author": "Kobar Sumarsono",
+  "author": "Kobar Septyanus Sumarsono",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",

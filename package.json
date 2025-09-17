@@ -18,7 +18,7 @@
     "url": "https://github.com/kobars/react-ai-avatar-kit.git"
   },
   "license": "MIT",
-  "author": "Kobar Sumarsono",
+  "author": "Kobar Septyanus Sumarsono",
   "private": true,
   "scripts": {
     "build": "turbo run build",
